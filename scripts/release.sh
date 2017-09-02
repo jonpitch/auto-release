@@ -3,9 +3,12 @@ if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; th
   # cut tag
   npm run release
 
-  # update changelog
+  # update changelog and push to master
+  git remote rm origin
+  git remote add origin https://jonpitch:${GH_TOKEN}@github.com/jonpitch/auto-release
+  git fetch
+  git checkout master
   npm run changelog
-
-  # success
+  git push
   exit 0
 fi
