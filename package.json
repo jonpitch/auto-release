@@ -13,7 +13,7 @@
     "build": "ember build",
     "start": "ember server",
     "test": "ember test",
-    "release": "ember release",
+    "release": "ember release -y true",
     "changelog": "auto-changelog -t compact --package"
   },
   "devDependencies": {
