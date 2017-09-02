@@ -9,6 +9,6 @@ if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; th
   git fetch
   git checkout master
   npm run changelog
-  git push
+  git push --set-upstream origin master
   exit 0
 fi

@@ -1,6 +1,6 @@
 {
   "name": "auto-release",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Small description for auto-release goes here",
   "license": "MIT",
   "author": "",
@@ -14,7 +14,7 @@
     "start": "ember server",
     "test": "ember test",
     "release": "ember release -y true",
-    "changelog": "auto-changelog -t compact --package; git add CHANGELOG.md; git push;"
+    "changelog": "auto-changelog -t compact --package; git add -A; git commit -m \"changelog\" git push;"
   },
   "devDependencies": {
     "auto-changelog": "^0.3.1",
