@@ -6,6 +6,10 @@ node_js:
 sudo: false
 dist: trusty
 
+branches:
+  only:
+    - master
+
 addons:
   chrome: stable
 
@@ -15,3 +19,9 @@ cache:
 
 before_install:
   - npm config set spin false
+
+script:
+  - npm test
+
+after_success:
+  - ./scripts/release.sh
