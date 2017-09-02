@@ -14,7 +14,7 @@
     "start": "ember server",
     "test": "ember test",
     "release": "ember release -y true",
-    "changelog": "auto-changelog -t compact --package; git add -A; git commit -m \"release notes\";"
+    "changelog": "auto-changelog -t compact --package; git add -A; git commit -m \"release notes [skip ci]\";"
   },
   "devDependencies": {
     "auto-changelog": "^0.3.1",
