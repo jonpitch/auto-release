@@ -1,18 +1,14 @@
 #!/bin/bash
 if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
-  # setup git
-  # git config --global user.email "travis@travis-ci.org"
-  # git config --global user.name "Travis CI"
-  #
-  # git remote add master https://${GH_TOKEN}@github.com/jonpitch/auto-release.git > /dev/null 2>&1
-  # git push --quiet --set-upstream master master
-
   # cut tag
   npm run release
 
-  # update changelog
+  # update changelog and push to master
+  git remote rm origin
+  git remote add origin https://jonpitch:${GH_TOKEN}@github.com/jonpitch/auto-release
+  git fetch
+  git checkout master
   npm run changelog
-
-  # success
+  git push
   exit 0
 fi

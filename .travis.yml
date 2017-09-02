@@ -18,6 +18,9 @@ cache:
     - $HOME/.npm
 
 before_install:
+  - git config --global user.name "Travis CI"
+  - git config --global user.email "travis@travis-ci.org"
+  - git config --global push.default simple
   - npm config set spin false
 
 script:
