@@ -5,8 +5,8 @@
 module.exports = {
   // local: true,
   // remote: 'some_remote',
-  // annotation: "Release %@",
-  // message: "Bumped version to %@",
+  annotation: "%@ [skip ci]",
+  message: "%@ [skip ci]"
   // manifest: [ 'package.json', 'bower.json', 'someconfig.json' ],
   // publish: true,
   // strategy: 'date',
