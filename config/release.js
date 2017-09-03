@@ -1,5 +1,6 @@
 /* jshint node:true */
 var RSVP = require('rsvp');
+const { exec } = require('child_process');
 
 // For details on each option run `ember help release`
 module.exports = {
@@ -13,11 +14,15 @@ module.exports = {
   // format: 'YYYY-MM-DD',
   // timezone: 'America/Los_Angeles',
   //
-  beforeCommit: function(project, versions) {
+  beforeCommit: function(/* project, versions */) {
     return new RSVP.Promise(function(resolve, reject) {
-      console.log(project);
-      console.log(versions);
-      reject();
+      exec('auto-changelog -t compact --package', (err) => {
+        if (err) {
+          reject(err);
+        }
+
+        resolve();
+      });
     });
   }
 };
