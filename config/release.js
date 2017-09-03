@@ -6,7 +6,7 @@ module.exports = {
   // local: true,
   // remote: 'some_remote',
   annotation: "%@ [skip ci]",
-  message: "%@ [skip ci]",
+  message: "%@ [skip ci]"
   // manifest: [ 'package.json', 'bower.json', 'someconfig.json' ],
   // publish: true,
   // strategy: 'date',
