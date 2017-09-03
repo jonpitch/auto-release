@@ -29,3 +29,4 @@ This is a proof of concept Ember application that:
   - 1 commit for `package.json`
   - 1 commit for `changelog.md`
   - this results in a redundant changelog entry
+- changelog entries are the squash merge title
