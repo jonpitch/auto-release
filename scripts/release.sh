@@ -10,6 +10,6 @@ if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; th
 
   # update changelog and push to master
   # npm run changelog
-  # git push --set-upstream origin master --follow-tags
+  git push --set-upstream origin master --follow-tags
   exit 0
 fi
